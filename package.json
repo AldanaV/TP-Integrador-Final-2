@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://aldanav.github.io/TP-Integrador/",
+  "homepage": "https://aldanav.github.io/TP-Integrador-Final/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
