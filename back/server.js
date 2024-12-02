@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 //const session = require('express-session'); 
 const librosRoutes = require('./routes/libroRoutes');
-//const userRoutes = require('./routes/userRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 require('dotenv').config(); 
 const app = express();
@@ -12,18 +12,18 @@ const app = express();
 app.use(cors()); // Permite solicitudes de diferentes orígenes
 app.use(express.json()); 
 
-/*  Configuración de la sesión 
+//Configuración de la sesión 
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true, 
     cookie: { secure: false }
-}));*/
+}));
 
 
 // Rutas
-//app.use('/api/libros', librosRoutes);
-//app.use('/api/users', userRoutes);
+app.use('/api/libros', librosRoutes);
+app.use('/api/users', userRoutes);
 
 
 // Conexión a la base de datos
@@ -37,3 +37,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
+
+
+
+//comando para que te de una clave: node -e "console.log(require('crypto').randomBytes(64).toString('hex'));"
