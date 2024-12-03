@@ -29,7 +29,6 @@ function App() {
           <Route path='/ingles' Component={LibrosIngles} />
           <Route path='/contacto' Component={Contacto} />
           <Route path='/detalle' Component={Detalle} />
-          <Route path='/administracion' Component={Administracion}/>
           <Route path='/register' Component={Register}/>
           <Route path='/login' Component={Login}/>
           <Route path="/privada" element={<ProtectedRoute element={<Privada />} />} />

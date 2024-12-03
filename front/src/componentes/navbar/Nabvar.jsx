@@ -31,12 +31,17 @@ logout();
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/libros">Libros</Nav.Link>
                             <Nav.Link as={Link} to="/ingles">Libros en inglés</Nav.Link>
-                            <Nav.Link as={Link} to = "/administracion">Administración</Nav.Link>
                             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
+                            </Nav>
+
+                            <Nav className="ms-auto"> 
                             <Nav.Link as={Link} to= "/register">Registro</Nav.Link>
                             <Nav.Link as={Link} to= "/login">Iniciar sesión</Nav.Link>
                             <Nav.Link as={Link} to= "/privada">Contenido exclusivo</Nav.Link>
                             <Nav.Link onClick={handleLogout}> Cerrar sesión</Nav.Link>
+                            
+                            
+                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
