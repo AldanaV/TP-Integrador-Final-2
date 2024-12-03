@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.registro{
+    background-color: rgb(248, 177, 248); 
+}
+
+.registro h1{
+    padding: 1.5rem;
+    background-color: rgb(172, 101, 101);
+    text-shadow:2px 1px 3px white ;
+}
+
+.contenedor-form1{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(248, 177, 248); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-form2{
+    width: 100%;
+    max-width: 650px;
+    background-color: rgb(172, 101, 101);
+    padding: 50px 10px 70px;
+    margin-bottom: 10rem;
+    text-align: left;
+    border-radius: 25px;
+    color: black;
+
+
+}
+
+.contenedor-form1 h2{
+    margin: 0% 5% 40px 5%;
+    color: black;
+    position: relative;
+    text-shadow:2px 1px 3px white ;
+}
+
+.contenedor-form1 h2 i{
+    font-size: 1rem;
+}
+
+input{
+    width: 90%;
+    margin: 0% 5% 0% 5%;
+    background-color: white;
+    border: 0;
+    outline: none;
+}
+
+label {
+    width: 90%;
+    margin: 0% 5% 0% 5%;
+}
+
+.btn-register{
+    display: flex;
+    margin-left: 0rem;
+    border: 0px;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-register button{
+    border-radius: 5px;
+    width: 80px;
+    margin-top:1.8rem;
+}
+
+.input-usuario{
+    padding-bottom: 10px;
+}
+
+.input-password{
+    padding-bottom: 10px;
+}
+
+.breadcrumb{
+    padding-left: 1rem;
+}
