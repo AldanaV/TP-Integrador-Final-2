@@ -26,31 +26,31 @@ return(
         <form onSubmit={handleSubmit}>
             <div className='input-form'>
                 <div className='input-usuario'>
-                <label for="usuario"> Usuario: </label>
+                <label for="usuario"> Nuevo usuario: </label>
                 <input type="text"
                 id="usuario"
-                placeholder="Nombre de usuario"
+                placeholder="Nuevo nombre de usuario"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required/>
-            </div>
+                </div>
 
-            <div className="input-password">
-            <label for="password">Contraseña: </label>
-            <input 
-            type="password"
-            id="password"
-            placeholder="Contraseña"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required/>
-            </div>
+                <div className="input-password">
+                <label for="password">Contraseña: </label>
+                <input 
+                type="password"
+                id="password"
+                placeholder="Contraseña"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required/>
+                </div>
             
-            <div className="btn-register">
-            <button type="submit"> Registrar </button>
+                <div className="btn-register">
+                <button type="submit"> Registrar </button>
+                </div>
+                
             </div>
-
-        </div>
         </form>
     </div>
 </div>

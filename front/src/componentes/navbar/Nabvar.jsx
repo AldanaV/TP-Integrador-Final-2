@@ -36,7 +36,7 @@ logout();
 
                             <Nav className="ms-auto"> 
                             <Nav.Link as={Link} to= "/registerpage">Registro</Nav.Link>
-                            <Nav.Link as={Link} to= "/login">Iniciar sesión</Nav.Link>
+                            <Nav.Link as={Link} to= "/loginpage">Iniciar sesión</Nav.Link>
                             <Nav.Link as={Link} to= "/privada">Contenido exclusivo</Nav.Link>
                             <Nav.Link onClick={handleLogout}> Cerrar sesión</Nav.Link>
                             

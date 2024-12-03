@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import api from './api';
 import { useAuth } from './AuthContext';
+import './Login.css';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -23,23 +24,41 @@ const Login = () => {
 //Formulario
 
 return(
-    <form onSubmit={handleSubmit}>
-        <h2> Iniciar sesión </h2>
-        <input type="text"
-        placeholder="Nombre de usuario"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        required/>
+<div className='conteiner-form1'>
+    <div className='conteiner-form2'>
+        <h2> Log in </h2>
+        <form onSubmit={handleSubmit}>
+            <div className='input-form1'>
+                <div className='input-usuario1'>
+                <label for="user">Usuario: </label>
+                <input type="text"
+                id="user"
+                placeholder="Nombre de usuario"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required/>
+                </div>
+            
+        
+                <div className='input-password2'>
+                <label for="password">Contraseña: </label>
+                <input 
+                type="password"
+                id="pass"
+                placeholder="Contraseña"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required/>
+                </div>  
+            
+                <div className="btn-login">
+                <button type="submit"> Iniciar sesión </button> 
+                </div>
 
-        <input 
-        type="password"
-        placeholder="Contraseña"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required/>
-
-        <button type="submit"> Iniciar sesión </button>
-    </form>
+            </div>
+        </form>
+    </div>
+</div>
 );
 
 }

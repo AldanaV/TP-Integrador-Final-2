@@ -7,12 +7,11 @@ import LibrosIngles from './componentes/ingles/Ingles'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Contacto from './componentes/contacto/Contacto'
 import Detalle from './componentes/detalle/Detalle'
-
-import Login from './componentes/api/Login'
 import { AuthProvider } from './componentes/api/AuthContext';
 import Privada from './componentes/privada/Privada'
 import ProtectedRoute from './componentes/api/ProtectedRoute'
 import RegisterPage from './componentes/api/RegisterPage'
+import LoginPage from './componentes/api/LoginPage'
 
 
 
@@ -30,7 +29,7 @@ function App() {
           <Route path='/contacto' Component={Contacto} />
           <Route path='/detalle' Component={Detalle} />
           <Route path='/registerpage' Component={RegisterPage}/>
-          <Route path='/login' Component={Login}/>
+          <Route path='/loginpage' Component={LoginPage}/>
           <Route path="/privada" element={<ProtectedRoute element={<Privada />} />} />
           <Route path='' />
 
