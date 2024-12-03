@@ -9,11 +9,17 @@ import Contacto from './componentes/contacto/Contacto'
 import Detalle from './componentes/detalle/Detalle'
 import Administracion from './componentes/catologo/Administracion'
 import Register from './componentes/api/Register'
+import Login from './componentes/api/Login'
+import { AuthProvider } from './componentes/api/AuthContext';
+import Privada from './componentes/privada/Privada'
+import ProtectedRoute from './componentes/api/ProtectedRoute'
+
+
 
 
 function App() {
   return (
-
+    <AuthProvider>
     <div>
       <Router>
         <NabVarPrincipal />
@@ -25,14 +31,15 @@ function App() {
           <Route path='/detalle' Component={Detalle} />
           <Route path='/administracion' Component={Administracion}/>
           <Route path='/register' Component={Register}/>
-        </Routes>
+          <Route path='/login' Component={Login}/>
+          <Route path="/privada" element={<ProtectedRoute element={<Privada />} />} />
+
+        </Routes> 
       </Router>
         
-        
     </div>
-
-  )
+    </AuthProvider>
+  );
 }
-
 
 export default App

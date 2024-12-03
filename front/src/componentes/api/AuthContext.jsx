@@ -1,25 +1,25 @@
 //Gestiona toda la app
-import React, {createContext, useState, useContext} from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({ Children}) => { //envuelve la app, se van a poder definir las sesiones que necesitan esta autentificacion
-    const [isAuthenticaded, setIsAuthenticaded] = useState(() => {
-        return localStorage.getItem('isAuthenticaded') === 'true';
+export const AuthProvider = ({ children}) => { //envuelve la app, se van a poder definir las sesiones que necesitan esta autentificacion
+    const [isAuthenticated, setIsAuthenticated] = useState(() => {
+        return localStorage.getItem('isAuthenticated') === 'true';
     });
 
     const login = () => {
-        setIsAuthenticaded(true);
-        localStorage.setItem('isAuthenticaded', 'true');
+        setIsAuthenticated(true);
+        localStorage.setItem('isAuthenticated', 'true');
     };
 
     const logout = () => {
-        setIsAuthenticaded(false);
-        localStorage.removeItem('isAuthenticaded'); 
+        setIsAuthenticated(false);
+        localStorage.removeItem('isAuthenticated'); 
     }
     return(
-        <AuthContext.Provider value = {{ isAuthenticaded, login, logout}}>
-        {Children}
+        <AuthContext.Provider value = {{ isAuthenticated, login, logout}}>
+        {children}
         </AuthContext.Provider>
     );
 };

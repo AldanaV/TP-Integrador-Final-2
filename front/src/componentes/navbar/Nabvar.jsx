@@ -4,10 +4,19 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom'
 import './Nabvar.css';
+import { useAuth } from '../api/AuthContext';
 
 
 
 const NabVarPrincipal = () => {
+const {logout} = useAuth();
+
+const handleLogout = () => {
+logout();
+// alert('Sesión cerrada.');
+}
+    
+    
     return (
 
         <div>
@@ -25,6 +34,9 @@ const NabVarPrincipal = () => {
                             <Nav.Link as={Link} to = "/administracion">Administración</Nav.Link>
                             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
                             <Nav.Link as={Link} to= "/register">Registro</Nav.Link>
+                            <Nav.Link as={Link} to= "/login">Iniciar sesión</Nav.Link>
+                            <Nav.Link as={Link} to= "/privada">Contenido exclusivo</Nav.Link>
+                            <Nav.Link onClick={handleLogout}> Cerrar sesión</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
