@@ -24,7 +24,7 @@ const NabVarPrincipal = () => {
                             <Nav.Link as={Link} to="/ingles">Libros en inglés</Nav.Link>
                             <Nav.Link as={Link} to = "/administracion">Administración</Nav.Link>
                             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
-                            
+                            <Nav.Link as={Link} to= "/register">Registro</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

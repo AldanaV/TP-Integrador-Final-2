@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Contacto from './componentes/contacto/Contacto'
 import Detalle from './componentes/detalle/Detalle'
 import Administracion from './componentes/catologo/Administracion'
+import Register from './componentes/api/Register'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/contacto' Component={Contacto} />
           <Route path='/detalle' Component={Detalle} />
           <Route path='/administracion' Component={Administracion}/>
+          <Route path='/register' Component={Register}/>
         </Routes>
       </Router>
         

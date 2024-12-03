@@ -1,27 +1,27 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/UserModel');
-const bcrypt = requiere('bcrypt');
+const bcrypt = require('bcrypt');
 
 //Rutas para registrar un nuevo usuario
-router.post('/register', async(req, res) => {
-    const { username, password} = req.body;
-    try{
-        const existingUser = await User.findOne({ username }); //Para que verifique si existe el usuario
-        if(existingUser){
-            return res.status(400).send('El usuario ya existe.');
+router.post("/register", async (req, res) => {
+    const { username, password } = req.body;
+    try {
+        const existingUser = await User.findOne({ username });
+        if (existingUser) {
+        return res.status(400).send("El usuario ya existe");
         }
-            //para que este encriptada
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ username, password: hashedPassword});
 
-        await newUser.save(); //para que lo guarde
-        console.log('Usuario registrado: ', newUser);
-        rest.status(201).send('Usuario registrado con exito.');
-    } catch(err){
-        console.error('Error al registrar el usuario: ', err);
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = new User({ username, password: hashedPassword });
+
+        await newUser.save();
+      //console.log("Usuario registrado: ", newUser);
+        res.status(201).send("Usuario registardo con éxito");
+    } catch (err) {
+        console.error("Error al registrar el usuario: ", err);
     }
-})
+});
 
 //Ruta para iniciar sesion
 router.post('/login', async(req,res) => {
@@ -34,12 +34,13 @@ router.post('/login', async(req,res) => {
         const match = await bcrypt.compare(password, user.password);
         if(!match){
             console.error('Contraseña incorrecta para el usuario: ',username);
-            return res.status(404).send('Contraseña incorrecta.');
+            return res.status(401).send('Contraseña incorrecta.');
         }
         
         req.session.user = user.username;
         res.send(`Usuario ${user.username} ha iniciado sesión`);
     }catch(err){
+        console.error(err);
         res.status(500).send('Error en el servidor.');
     }
 });
