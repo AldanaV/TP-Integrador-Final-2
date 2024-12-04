@@ -23,7 +23,8 @@
 
 <h2>Instalación</h2>
 <h3>Backend</h3>
-<p>1. Navega al directorio /back
+<p>
+    1. Navega al directorio /back
     cd back
 
     2.Instala las dependencias del backend.
@@ -34,6 +35,47 @@
 
     Asegurate de reemplazar "mi-base-de-datos" con el nombre de tu base de datos en MongoDB.
 
-    4. Iniciar el servidor del backen.
+    4. Iniciar el servidor del backend.
     npm start
 </p>
+
+<h3>Frontend</h3>
+<p>
+    1.Navega al directorio /front
+    cd front
+
+    2.Instala las dependencias del frontend.
+    npm install
+
+    3.Inicia el servidor del frontend.
+    npm run dev
+</p>
+
+<h2>Funcionalidades</h2>
+<h3>Funciones de los libros</h3>
+<ul>
+    <li>Lista de libros: muestra todos los libros disponibles en la base de datos.</li>
+    <li>Detalle del libro: consulta los detalles de un libro en especifico.</li>
+    <li>Crear libro: pide 4 valores y añade un libro a la base de datos.</li>
+    <li>Editar libro: modifica los detalles del libro seleccionado.</li>
+    <li>Eliminar libro: elimina un libro seleccionado de la base de datos.</li>
+</ul>
+
+<h3>Funciones de los usuarios</h3>
+<ul>
+    <li>Registro: permite el registro de un nuevo usuario y se guarda en la base de datos.</li>
+    <li>Log in: si tenes creado un usuario y contraseña, podes ingresar al contenido exclusivo</li>
+    <li>Log out: cierra la sesión y ya no podes acceder al contenido exclusivo.</li>
+</ul>
+
+<h2>Endpoints del API</h2>
+<ul>
+    <li>GET /api/libros - Obtiene todos los libros.</li>
+    <li>GET /api/libros/:id - Obtiene un libro por ID.</li>
+    <li>POST /api/libros - Crea un libro.</li>
+    <li>PUT api/libros/:id - Actualiza un libro por ID.</li>
+    <li>DELETE /api/libros/:id - Elimina un libro por ID.</li>
+</ul>
+
+<h2>¡Muchas gracias por visitarnos!</h2>
+<p>Nunca dudes en despejar tu mente con un buen libro</p>
