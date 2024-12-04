@@ -13,7 +13,7 @@ const {logout} = useAuth();
 
 const handleLogout = () => {
 logout();
-// alert('Sesión cerrada.');
+
 }
     
     

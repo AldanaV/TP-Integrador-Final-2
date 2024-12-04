@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const libroController = require('../controllers/librosController');
 
-// Rutas para los hechizos
+
 router.get('/', libroController.getLibro);
 router.get('/:id', libroController.getLibroById);
 router.post('/', libroController.createLibro);

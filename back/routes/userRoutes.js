@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require('../models/UserModel');
 const bcrypt = require('bcrypt');
 
-//Rutas para registrar un nuevo usuario
+
 router.post("/register", async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -16,14 +16,14 @@ router.post("/register", async (req, res) => {
         const newUser = new User({ username, password: hashedPassword });
 
         await newUser.save();
-      //console.log("Usuario registrado: ", newUser);
+
         res.status(201).send("Usuario registardo con éxito");
     } catch (err) {
         console.error("Error al registrar el usuario: ", err);
     }
 });
 
-//Ruta para iniciar sesion
+
 router.post('/login', async(req,res) => {
     const {username, password} = req.body;
     try{
@@ -46,7 +46,7 @@ router.post('/login', async(req,res) => {
 });
 
 
-//Ruta para cerrar sesion
+
 router.get('/logout', (req, res) => {
     req.session.destroy(err => {
         if(err){
@@ -56,7 +56,7 @@ router.get('/logout', (req, res) => {
     });
 });
 
-//Ruta de contenido protegido
+
 router.get('/privada', (req, res) => {
     if(req.session.user){
         res.send(`Bienvenido, ${req.session.user}`);

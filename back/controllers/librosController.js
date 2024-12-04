@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Libro = require('../models/LibrosModel');
 
-//Obtener todos los libros
+
 exports.getLibro = async(req, res) =>{
     try{
         const libros = await Libro.find();
@@ -11,7 +11,7 @@ exports.getLibro = async(req, res) =>{
     }
 }
 
-//Crear un libro
+
 exports.createLibro = async(req, res) => {
     const libro = new Libro({
         titulo: req.body.titulo,
@@ -28,7 +28,7 @@ exports.createLibro = async(req, res) => {
     }
 };
 
-// Obtener un libro por ID
+
 exports.getLibroById = async (req, res) => {
     try {
         const libro = await Libro.findById(req.params.id);
@@ -42,7 +42,7 @@ exports.getLibroById = async (req, res) => {
     }
 };
 
-// Actualizar un libro por ID
+
 exports.updateLibro = async (req, res) => {
     try {
         const libro = await Libro.findById(req.params.id);
@@ -63,7 +63,7 @@ exports.updateLibro = async (req, res) => {
 };
 
 
-// Eliminar un libro por ID
+
 exports.deleteLibro = async (req, res) => {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
         return res.status(400).json({ message: 'ID no válido' });

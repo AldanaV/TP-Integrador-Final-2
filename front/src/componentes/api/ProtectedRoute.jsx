@@ -5,7 +5,7 @@ import { useAuth } from "./AuthContext";
     const {isAuthenticated} = useAuth();
 
     if(isAuthenticated){
-        //alert('Sesion iniciada...');
+        
     }
 
     return isAuthenticated ? element : <Navigate to ="/loginpage"/>;

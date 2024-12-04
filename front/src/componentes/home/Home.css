@@ -4,8 +4,7 @@
 }
 
 .librosVendidos {
-    /*display: flex;
-    flex-flow: row wrap;*/
+    
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -29,9 +28,4 @@ div .imagenes {
     padding: 1;
 }
 
-/*@media (max-width: 768px) {
-    .librosVendidos {
-        background-color: aqua;
-    }
-} 
-*/
+
