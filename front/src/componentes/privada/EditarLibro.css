@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.editarlibro-titulo h2{
+    background-color: #994750;
+    padding: 1.5rem;
+    text-shadow:2px 1px 3px white;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.form-group{
+    background-color: #994750;
+    border-radius: 30px;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 1.5rem 12rem 0rem 12rem;
+    text-align: center;
+    color: white;
+
+}
+
+.form-group input{
+    background-color: rgb(255, 255, 255);
+    width: 34%;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.actualizar-libro{
+    border-radius: 3px;
+    border: solid 1px black;
+    background-color: #ddd5d6;
+    margin-left: 37.5rem;
+    display: inline-block;
+    padding: 2px 30px 1px 30px;
+    margin-bottom: 10rem;
+    margin-top: 3.5rem;
+}
+
+.actualizar-libro input{
+    background-color: #ddd5d6;
+    padding: 1px 15px 1px 10px;
+    margin: 1px;
+}

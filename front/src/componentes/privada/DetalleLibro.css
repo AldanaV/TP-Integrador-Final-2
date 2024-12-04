@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.detallelibro-title h2{
+    background-color: #994750;
+    padding: 1.5rem;
+    text-shadow:2px 1px 3px white;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.libro-info p{
+    background-color: #994750;
+    border-radius: 30px;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 1.5rem 12rem 0rem 12rem;
+    text-align: center;
+    text-shadow: 2px 1px 3px white;
+}
+
+.acciones{
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    
+}
+
+.editar{
+    background-color: #ddd5d6;
+    display: inline-block;
+    padding: 2px 30px 1px 30px;
+    margin-right: 1rem;
+    border-radius: 3px;
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+}
+
+.eliminar{
+    border-radius: 3px;
+    border: solid 1px black;
+    background-color: #ddd5d6;
+    margin-left: 1rem;
+}

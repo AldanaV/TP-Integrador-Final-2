@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './CrearLibro.css';
+import Footer from '../footer/Footer';
 
 const CrearLibro = () => {
 const [titulo, setTitulo] = useState('');
@@ -14,7 +16,7 @@ const navigate = useNavigate();
     try {
         const nuevoLibro = { titulo, autor, editorial, cantidad };
         await axios.post('http://localhost:5000/api/libros', nuevoLibro);
-        navigate('/prueba');
+        navigate('/privada');
     } catch (error) {
         console.error('Error al crear el libro:', error);
     }
@@ -22,10 +24,12 @@ const navigate = useNavigate();
 
 return (
     <div className="crear-libro">
-        <h2>Crear Libro</h2>
+        <div className='crearlibro-title'>
+            <h2>Crear Libro</h2>
+        </div>
         <form onSubmit={handleSubmit}>
         <div className="form-group">
-            <label htmlFor="titulo">Titulo</label>
+            <label htmlFor="titulo">Titulo:</label>
             <input
             type="text"
             id="titulo"
@@ -36,7 +40,7 @@ return (
             </div>
 
             <div className="form-group">
-            <label htmlFor="autor">Autor</label>
+            <label htmlFor="autor">Autor:</label>
             <input
             type="text"
             id="autor"
@@ -47,7 +51,7 @@ return (
             </div>
 
             <div className="form-group">
-            <label htmlFor="editorial">Editorial</label>
+            <label htmlFor="editorial">Editorial:</label>
             <input
             type="text"
             id="editorial"
@@ -58,7 +62,7 @@ return (
             </div>
 
             <div className="form-group">
-            <label htmlFor="cantidad">Cantidad</label>
+            <label htmlFor="cantidad">Cantidad:</label>
             <input
             type="text"
             id="cantidad"
@@ -67,9 +71,12 @@ return (
             required
             />
         </div>
+        <div className='btn-crear'>
         <button type="submit">Crear</button>
-
+        </div>
         </form>
+
+        <Footer/>
     </div>
 );
 };

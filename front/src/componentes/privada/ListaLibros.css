@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.lista-title h1{
+    background-color: #994750;
+    padding: 1.5rem;
+    text-shadow:2px 1px 3px white ;
+
+}
+
+.lista-libros{
+    padding-top: 2rem;
+}
+
+.link-crearlibro{
+    padding: 20px 0px 20px 30px;
+    padding-bottom: 14rem;
+}
+
+.container-lista{
+    background-color: rgb(236, 225, 210);
+}
+
+.crear-libros{
+    background-color: #ddd5d6;
+    display: inline-block;
+    padding: 2px 30px 1px 30px;
+    margin-right: 1rem;
+    border-radius: 3px;
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+}

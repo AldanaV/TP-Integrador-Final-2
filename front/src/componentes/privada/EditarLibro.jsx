@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import './EditarLibro.css'
+import Footer from "../footer/Footer";
 
 
 const EditarLibro = () => {
@@ -39,7 +40,7 @@ useEffect(() => {
         body: JSON.stringify({ titulo, autor, editorial, cantidad }),
     });
         if (response.ok) {
-        navigate("/prueba");
+        navigate("/privada");
     } else {
         console.error("Error al actualizar libro");
     }
@@ -52,10 +53,13 @@ useEffect(() => {
 
     return (
     <div className="formulario-libro">
-    <h2>Editar Libro</h2>
-    <form onSubmit={handleSubmit}>
+        <div className="editarlibro-titulo">
+            <h2>Editar Libro</h2>
+        </div>
+        
+        <form onSubmit={handleSubmit}>
         <div className="form-group">
-            <label htmlFor="titulo">Titulo</label>
+            <label htmlFor="titulo">Titulo:</label>
             <input
             type="text"
             id="titulo"
@@ -66,7 +70,7 @@ useEffect(() => {
         </div>
         
         <div className="form-group">
-            <label htmlFor="autor">Autor</label>
+            <label htmlFor="autor">Autor:</label>
             <input
             id="autor"
             value={autor}
@@ -76,7 +80,7 @@ useEffect(() => {
         </div>
             
             <div className="form-group">
-            <label htmlFor="editorial">Editorial</label>
+            <label htmlFor="editorial">Editorial:</label>
             <input
             type="text"
             id="editorial"
@@ -87,7 +91,7 @@ useEffect(() => {
             </div>
 
             <div className="form-group">
-            <label htmlFor="cantidad">Cantidad</label>
+            <label htmlFor="cantidad">Cantidad:</label>
             <input
             type="number"
             id="cantidad"
@@ -97,8 +101,12 @@ useEffect(() => {
             />
             </div>
             
+            <div className="actualizar-libro">
             <input type="submit" value="Actualizar Libro" />
+            </div>
     </form>
+
+    <Footer/>
     </div>
 );
 };

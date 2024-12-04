@@ -8,14 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Contacto from './componentes/contacto/Contacto'
 import Detalle from './componentes/detalle/Detalle'
 import { AuthProvider } from './componentes/api/AuthContext';
-import Privada from './componentes/privada/Privada'
 import ProtectedRoute from './componentes/api/ProtectedRoute'
 import RegisterPage from './componentes/api/RegisterPage'
 import LoginPage from './componentes/api/LoginPage'
-import ListaLibros from './componentes/prueba/ListaLibros'
-import CrearLibro from './componentes/prueba/CrearLibro'
-import DetalleLibro from './componentes/prueba/DetalleLibro'
-import EditarLibro from './componentes/prueba/EditarLibro'
+import ListaLibros from './componentes/privada/ListaLibros'
+import CrearLibro from './componentes/privada/CrearLibro'
+import DetalleLibro from './componentes/privada/DetalleLibro'
+import EditarLibro from './componentes/privada/EditarLibro'
 
 
 
@@ -35,8 +34,8 @@ function App() {
           <Route path='/detalle' Component={Detalle} />
           <Route path='/registerpage' Component={RegisterPage}/>
           <Route path='/loginpage' Component={LoginPage}/>
-          <Route path="/privada" element={<ProtectedRoute element={<Privada />} />} />
-          <Route path='/prueba' Component={ListaLibros} />
+          <Route path="/privada" element={<ProtectedRoute element={<ListaLibros />} />} />
+          <Route path='/privada' Component={ListaLibros} />
           <Route path='/crear' Component={CrearLibro} />
           <Route path='/libros/:id' Component={DetalleLibro} />
           <Route path='/editar-libros/:id' Component={EditarLibro} />

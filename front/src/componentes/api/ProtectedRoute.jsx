@@ -8,7 +8,7 @@ import { useAuth } from "./AuthContext";
         //alert('Sesion iniciada...');
     }
 
-    return isAuthenticated ? element : <Navigate to ="/login"/>;
+    return isAuthenticated ? element : <Navigate to ="/loginpage"/>;
 }
 
 export default ProtectedRoute;
