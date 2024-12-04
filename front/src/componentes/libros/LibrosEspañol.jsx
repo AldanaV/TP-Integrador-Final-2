@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
-import './Libros.css'
+import './LibrosEspañol.css'
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import aquiles from '../imagenes/aquiles.png'
 import wolf from '../imagenes/wolf.png'
@@ -12,7 +12,7 @@ import tanpocavida from '../imagenes/tanpocavida.png'
 import belladona from '../imagenes/belladona.png'
 import Footer from '../footer/Footer';
 
-const Libros = () => {
+const LibrosEspañol = () => {
     const navigate = useNavigate();
     const [libros, setLibros] = useState([
         {
@@ -139,4 +139,4 @@ const Libros = () => {
     )
 }
 
-export default Libros;
+export default LibrosEspañol;

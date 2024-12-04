@@ -12,7 +12,7 @@ const RegisterPage = () => {
             <div className='breadcrumb'>
                 <Breadcrumb>
                     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item active>Contacto</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Registro</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
         <p style={{textAlign: 'center', fontSize: '30px'}}>¿Querés crearte un usuario? ¡Entraste en la página adecuada!</p>

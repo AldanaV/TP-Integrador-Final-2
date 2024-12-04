@@ -12,7 +12,7 @@ exports.getLibro = async(req, res) =>{
 }
 
 //Crear un libro
-exports.createLibro = async(req, res) =>{
+exports.createLibro = async(req, res) => {
     const libro = new Libro({
         titulo: req.body.titulo,
         autor: req.body.autor,
@@ -21,7 +21,7 @@ exports.createLibro = async(req, res) =>{
     });
 
     try{
-        const nuevoLibro = await Libro.save();
+        const nuevoLibro = await libro.save();
         res.status(201).json(nuevoLibro);
     } catch(err){
         res.status(400).json({ message: err.message});
