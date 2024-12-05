@@ -32,6 +32,7 @@ logout();
                             <Nav.Link as={Link} to="/librosespañol">Libros</Nav.Link>
                             <Nav.Link as={Link} to="/ingles">Libros en inglés</Nav.Link>
                             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
+                            <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
                             </Nav>
 
                             <Nav className="ms-auto"> 
@@ -39,6 +40,7 @@ logout();
                             <Nav.Link as={Link} to= "/loginpage">Iniciar sesión</Nav.Link>
                             <Nav.Link as={Link} to= "/privada">Contenido exclusivo</Nav.Link>
                             <Nav.Link onClick={handleLogout}> Cerrar sesión</Nav.Link>
+
                             
                             
                             
