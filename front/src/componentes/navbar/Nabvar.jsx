@@ -30,7 +30,7 @@ logout();
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/librosespañol">Libros</Nav.Link>
-                            <Nav.Link as={Link} to="/ingles">Libros en inglés</Nav.Link>
+                            <Nav.Link as={Link} to="/ingles">Libros en ingles</Nav.Link>
                             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
                             </Nav>
 
