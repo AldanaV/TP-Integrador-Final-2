@@ -32,7 +32,6 @@ logout();
                             <Nav.Link as={Link} to="/librosespañol">Libros</Nav.Link>
                             <Nav.Link as={Link} to="/ingles">Libros en inglés</Nav.Link>
                             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
-                            <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
                             </Nav>
 
                             <Nav className="ms-auto"> 
